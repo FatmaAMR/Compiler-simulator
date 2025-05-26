@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1747064011 source:c:\projects\comiler_project\scanner.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	<cctype>
+	<iomanip>
+	"Token.h"
+	"helpers.h"
+
+1747104413 source:c:\projects\comiler_project\main.cpp
+	"Lexer.h"
+	"Parser.h"
+	"helpers.h"
+	"Token.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<unordered_map>
+	<cctype>
+	<iomanip>
+
+1747064011 c:\projects\comiler_project\scanner.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	<cctype>
+	<iomanip>
+	"Token.h"
+	"helpers.h"
+
+1747102760 source:c:\projects\comiler_project\parser.cpp
+	"Parser.h"
+	<iostream>
+
+1747100213 c:\projects\comiler_project\parser.h
+	<string>
+	<vector>
+	<fstream>
+	"Token.h"
+
+1747057582 source:c:\projects\comiler_project\src\token.cpp
+	<string>
+
+1747100256 c:\projects\comiler_project\include\token.h
+	<string>
+
+1747058930 c:\projects\comiler_project\helpers.cpp
+	"helpers.h"
+	<fstream>
+	<sstream>
+	<iostream>
+
+1747058988 c:\projects\comiler_project\helpers.h
+	<string>
+
+1747068448 source:c:\projects\comiler_project\helpers.cpp
+	"helpers.h"
+	<fstream>
+	<sstream>
+	<iostream>
+
+1747101978 source:c:\projects\comiler_project\lexer.cpp
+	"Lexer.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<cctype>
+	<iomanip>
+	"helpers.h"
+
+1747065756 c:\projects\comiler_project\lexer.h
+	<string>
+	<vector>
+	<unordered_map>
+	<unordered_set>
+	"Token.h"
+
+1747100148 source:c:\projects\comiler_project\token.cpp
+	<string>
+	"Token.h"
+
+1747099616 c:\projects\comiler_project\token.cpp
+	<string>
+	"Token.h"
+

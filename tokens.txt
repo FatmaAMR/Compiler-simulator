@@ -1,0 +1,48 @@
+Line    | Lexeme         | Token Type
+--------------------------------------------------
+1       | /@             | COMMENT_START
+1       |  This is main function | COMMENT_CONTENT
+1       | @/             | COMMENT_END
+2       | NOReturn       | VOID
+2       | decrease       | IDENTIFIER
+2       | (              | BRACE
+2       | )              | BRACE
+2       | {              | BRACE
+3       | Imw            | INTEGER
+3       | num            | IDENTIFIER
+3       | =              | ASSIGNMENT_OP
+3       | 5              | CONSTANT
+3       | ;              | SEMICOLON
+4       | RepeatWhen     | IDENTIFIER
+4       | (              | BRACE
+4       | counter        | IDENTIFIER
+4       | <              | RELATIONAL_OP
+4       | num            | IDENTIFIER
+4       | )              | BRACE
+4       | {              | BRACE
+5       | reg3           | IDENTIFIER
+5       | =              | ASSIGNMENT_OP
+5       | reg3           | IDENTIFIER
+5       | -              | ADDOP
+5       | 1              | CONSTANT
+5       | ;              | SEMICOLON
+6       | }              | BRACE
+7       | }              | BRACE
+8       | IMwf           | FLOAT
+8       | flt            | IDENTIFIER
+8       | ;              | SEMICOLON
+9       |                | EOF_TOKEN
+
+Total Number of lexical errors: 0
+
+Parser Results:
+--------------------------------------------------
+Line : 1 Matched Rule used: Comment
+Line : 4 Not Matched Error: Unexpected token '<'
+Line : 4 Not Matched Error: Unexpected token '{'
+Line : 4 Matched Rule used: expression-stmt
+Line : 5 Matched Rule used: expression-stmt
+Line : 4 Matched Rule used: compound-stmt
+Line : 2 Matched Rule used: fun-declaration
+Line : 8 Matched Rule used: var-declaration
+Total NO of errors: 2

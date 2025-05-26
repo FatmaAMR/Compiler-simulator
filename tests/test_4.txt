@@ -1,0 +1,87 @@
+/@ 
+   Error test file for Project#3 compiler
+   This file contains various syntax and semantic errors 
+@/
+
+/^ Error 1: Invalid identifier starting with number
+Imw 3invalidVar;
+
+/^ Error 2: Missing semicolon
+Imw x = 10
+
+/^ Error 3: Undefined type
+CustomType var;
+
+/^ Error 4: Mismatched brackets
+Imw badFunction() {
+    Imw a;
+    a = 10;
+    IfTrue (a > 5) {
+        a = a * 2;
+    /^ Missing closing bracket
+
+/^ Error 5: Invalid operator
+Imw y;
+y = 5 $$ 3;
+
+/^ Error 6: Invalid assignment
+5 = y;
+
+/^ Error 7: Missing parentheses in conditional
+IfTrue a > 10) {
+    a = 0;
+}
+
+/^ Error 8: Invalid array access
+Imw arr[5];
+arr[2+] = 10;
+
+/^ Error 9: Invalid struct access
+Loli Test {
+    Imw value;
+};
+Loli Test t;
+t->> value = 10;
+
+/^ Error 10: Invalid function call
+Imw result;
+result = add(1, 2, 3);  /^ Too many arguments
+
+/^ Error 11: Using return where not allowed
+Reiterate (Imw i = 0; i < 10; i = i + 1) {
+    Turnback i;  /^ Can't return from inside a loop
+}
+
+/^ Error 12: Invalid comment structure
+/ This is not a valid comment
+
+/^ Error 13: Unclosed multi-line comment
+/@
+  This comment has no closing tag
+
+/^ Error 14: Invalid include syntax
+Include fileName.txt);
+
+/^ Error 15: Type mismatch
+Chj letter;
+letter = 123;
+
+/^ Main function with mixed valid and invalid code
+Imw main() {
+    /^ Valid declaration
+    Imw valid;
+    
+    /^ Error 16: Undefined variable
+    undefined = 10;
+    
+    /^ Error 17: Missing operator
+    Imw z;
+    z = 10 20;
+    
+    /^ Error 18: Invalid loop condition
+    RepeatWhen () {
+        z = z + 1;
+    }
+    
+    Turnback 0;
+}

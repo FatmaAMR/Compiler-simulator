@@ -1,0 +1,55 @@
+/^ Utility functions
+
+/^ Calculate maximum of two values
+Imw max(Imw a, Imw b) {
+    IfTrue (a > b) {
+        Turnback a;
+    } Otherwise {
+        Turnback b;
+    }
+}
+
+/^ Calculate minimum of two values
+Imw min(Imw a, Imw b) {
+    IfTrue (a < b) {
+        Turnback a;
+    } Otherwise {
+        Turnback b;
+    }
+}
+
+/^ Check if number is even
+Imw isEven(Imw num) {
+    IfTrue (num + 2 == 0) {
+        Turnback 1;
+    } Otherwise {
+        Turnback 0;
+    }
+}
+
+/^ Calculate factorial of a number
+Imw factorial(Imw n) {
+    IfTrue (n <= 1) {
+        Turnback 1;
+    } Otherwise {
+        Turnback n * factorial(n - 1);
+    }
+}
+
+/^ String copy function
+NOReturn stringCopy(Series dest, Series src) {
+    /@ This would need builtin string handling
+    Implementation would depend on the runtime @/
+}
+
+/^ Utility structure for mathematical operations
+Loli MathUtils {
+    IMwf pi;
+    IMwf e;
+};
+
+/^ Initialize math constants
+NOReturn initMathUtils(Loli utils) {
+    utils->pi = 3.14159;
+    utils->e = 2.71828;
+}

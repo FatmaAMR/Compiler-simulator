@@ -1,0 +1,27 @@
+/@ Content for includeTest.txt to test Project 3 grammar rules @/
+
+// Rule 39: comment → /@ STR @/
+/@ Utility functions @/
+
+// Rule 39: comment → /^ STR
+/^ Helper function definition
+
+// Rules 5, 6: var-declaration → type-specifier ID ;
+Imw util_var; // Global variable
+
+// Rule 7: fun-declaration → type-specifier ID ( params ) compound-stmt
+Imw util_func(Imw input) {
+    // Rule 13: local-declarations
+    Imw temp;
+    
+    // Rule 20-27: expression with addop and relop
+    temp = input + 5;
+    
+    // Rule 17: selection-stmt
+    IfTrue (temp > 0) {
+        temp = temp - 1;
+    }
+    
+    // Rule 19: jump-stmt
+    Turnback temp;
+}

@@ -1,0 +1,527 @@
+Line    | Lexeme         | Token Type
+--------------------------------------------------
+1       | /@             | COMMENT_START
+1       |  
+   Test file for Project#3 compiler
+   This file demonstrates arrays, pointers, and complex expressions 
+| COMMENT_CONTENT
+4       | @/             | COMMENT_END
+6       | /^             | SINGLE_LINE_COMMENT_START
+6       |  Structure for complex data| SINGLE_LINE_COMMENT_CONTENT
+7       | Loli           | STRUCT
+7       | Vector         | IDENTIFIER
+7       | {              | BRACE
+8       | IMwf           | FLOAT
+8       | x              | IDENTIFIER
+8       | ;              | SEMICOLON
+9       | IMwf           | FLOAT
+9       | y              | IDENTIFIER
+9       | ;              | SEMICOLON
+10      | IMwf           | FLOAT
+10      | z              | IDENTIFIER
+10      | ;              | SEMICOLON
+11      | }              | BRACE
+11      | ;              | SEMICOLON
+13      | /^             | SINGLE_LINE_COMMENT_START
+13      |  Function to calculate vector magnitude| SINGLE_LINE_COMMENT_CONTENT
+14      | IMwf           | FLOAT
+14      | magnitude      | IDENTIFIER
+14      | (              | BRACE
+14      | Loli           | STRUCT
+14      | Vector         | IDENTIFIER
+14      | v              | IDENTIFIER
+14      | )              | BRACE
+14      | {              | BRACE
+15      | IMwf           | FLOAT
+15      | result         | IDENTIFIER
+15      | ;              | SEMICOLON
+16      | result         | IDENTIFIER
+16      | =              | ASSIGNMENT_OP
+16      | (              | BRACE
+16      | v              | IDENTIFIER
+16      | ->             | ACCESS_OP
+16      | x              | IDENTIFIER
+16      | *              | MULOP
+16      | v              | IDENTIFIER
+16      | ->             | ACCESS_OP
+16      | x              | IDENTIFIER
+16      | )              | BRACE
+16      | +              | ADDOP
+16      | (              | BRACE
+16      | v              | IDENTIFIER
+16      | ->             | ACCESS_OP
+16      | y              | IDENTIFIER
+16      | *              | MULOP
+16      | v              | IDENTIFIER
+16      | ->             | ACCESS_OP
+16      | y              | IDENTIFIER
+16      | )              | BRACE
+16      | +              | ADDOP
+16      | (              | BRACE
+16      | v              | IDENTIFIER
+16      | ->             | ACCESS_OP
+16      | z              | IDENTIFIER
+16      | *              | MULOP
+16      | v              | IDENTIFIER
+16      | ->             | ACCESS_OP
+16      | z              | IDENTIFIER
+16      | )              | BRACE
+16      | ;              | SEMICOLON
+17      | Turnback       | RETURN
+17      | result         | IDENTIFIER
+17      | ;              | SEMICOLON
+18      | }              | BRACE
+20      | /^             | SINGLE_LINE_COMMENT_START
+20      |  Array manipulation function| SINGLE_LINE_COMMENT_CONTENT
+21      | Imw            | INTEGER
+21      | sumArray       | IDENTIFIER
+21      | (              | BRACE
+21      | Series         | STRING
+21      | arr            | IDENTIFIER
+21      | ,              | COMMA
+21      | Imw            | INTEGER
+21      | size           | IDENTIFIER
+21      | )              | BRACE
+21      | {              | BRACE
+22      | Imw            | INTEGER
+22      | sum            | IDENTIFIER
+22      | ;              | SEMICOLON
+23      | sum            | IDENTIFIER
+23      | =              | ASSIGNMENT_OP
+23      | 0              | CONSTANT
+23      | ;              | SEMICOLON
+25      | Reiterate      | LOOP
+25      | (              | BRACE
+25      | Imw            | INTEGER
+25      | i              | IDENTIFIER
+25      | =              | ASSIGNMENT_OP
+25      | 0              | CONSTANT
+25      | ;              | SEMICOLON
+25      | i              | IDENTIFIER
+25      | <              | RELATIONAL_OP
+25      | size           | IDENTIFIER
+25      | ;              | SEMICOLON
+25      | i              | IDENTIFIER
+25      | =              | ASSIGNMENT_OP
+25      | i              | IDENTIFIER
+25      | +              | ADDOP
+25      | 1              | CONSTANT
+25      | )              | BRACE
+25      | {              | BRACE
+26      | sum            | IDENTIFIER
+26      | =              | ASSIGNMENT_OP
+26      | sum            | IDENTIFIER
+26      | +              | ADDOP
+26      | arr            | IDENTIFIER
+26      | [              | BRACE
+26      | i              | IDENTIFIER
+26      | ]              | BRACE
+26      | ;              | SEMICOLON
+27      | }              | BRACE
+29      | Turnback       | RETURN
+29      | sum            | IDENTIFIER
+29      | ;              | SEMICOLON
+30      | }              | BRACE
+32      | /^             | SINGLE_LINE_COMMENT_START
+32      |  Function with pointer parameters| SINGLE_LINE_COMMENT_CONTENT
+33      | NOReturn       | VOID
+33      | swap           | IDENTIFIER
+33      | (              | BRACE
+33      | Imw            | INTEGER
+33      | a              | IDENTIFIER
+33      | ,              | COMMA
+33      | Imw            | INTEGER
+33      | b              | IDENTIFIER
+33      | )              | BRACE
+33      | {              | BRACE
+34      | Imw            | INTEGER
+34      | temp           | IDENTIFIER
+34      | ;              | SEMICOLON
+35      | temp           | IDENTIFIER
+35      | =              | ASSIGNMENT_OP
+35      | a              | IDENTIFIER
+35      | ;              | SEMICOLON
+36      | a              | IDENTIFIER
+36      | =              | ASSIGNMENT_OP
+36      | b              | IDENTIFIER
+36      | ;              | SEMICOLON
+37      | b              | IDENTIFIER
+37      | =              | ASSIGNMENT_OP
+37      | temp           | IDENTIFIER
+37      | ;              | SEMICOLON
+38      | }              | BRACE
+40      | /^             | SINGLE_LINE_COMMENT_START
+40      |  Function to demonstrate nested conditions and loops| SINGLE_LINE_COMMENT_CONTENT
+41      | Imw            | INTEGER
+41      | findMax        | IDENTIFIER
+41      | (              | BRACE
+41      | Series         | STRING
+41      | arr            | IDENTIFIER
+41      | ,              | COMMA
+41      | Imw            | INTEGER
+41      | size           | IDENTIFIER
+41      | )              | BRACE
+41      | {              | BRACE
+42      | Imw            | INTEGER
+42      | max            | IDENTIFIER
+42      | ;              | SEMICOLON
+43      | Imw            | INTEGER
+43      | i              | IDENTIFIER
+43      | ;              | SEMICOLON
+44      | IfTrue         | CONDITION
+44      | (              | BRACE
+44      | size           | IDENTIFIER
+44      | <=             | RELATIONAL_OP
+44      | 0              | CONSTANT
+44      | )              | BRACE
+44      | {              | BRACE
+45      | Turnback       | RETURN
+45      | -1             | CONSTANT
+45      | ;              | SEMICOLON
+46      | }              | BRACE
+47      | max            | IDENTIFIER
+47      | =              | ASSIGNMENT_OP
+47      | arr            | IDENTIFIER
+47      | [              | BRACE
+47      | 0              | CONSTANT
+47      | ]              | BRACE
+47      | ;              | SEMICOLON
+48      | i              | IDENTIFIER
+48      | =              | ASSIGNMENT_OP
+48      | 1              | CONSTANT
+48      | ;              | SEMICOLON
+49      | RepeatWhen     | LOOP
+49      | (              | BRACE
+49      | i              | IDENTIFIER
+49      | <              | RELATIONAL_OP
+49      | size           | IDENTIFIER
+49      | )              | BRACE
+49      | {              | BRACE
+50      | IfTrue         | CONDITION
+50      | (              | BRACE
+50      | arr            | IDENTIFIER
+50      | [              | BRACE
+50      | i              | IDENTIFIER
+50      | ]              | BRACE
+50      | >              | RELATIONAL_OP
+50      | max            | IDENTIFIER
+50      | )              | BRACE
+50      | {              | BRACE
+51      | max            | IDENTIFIER
+51      | =              | ASSIGNMENT_OP
+51      | arr            | IDENTIFIER
+51      | [              | BRACE
+51      | i              | IDENTIFIER
+51      | ]              | BRACE
+51      | ;              | SEMICOLON
+52      | }              | BRACE
+53      | i              | IDENTIFIER
+53      | =              | ASSIGNMENT_OP
+53      | i              | IDENTIFIER
+53      | +              | ADDOP
+53      | 1              | CONSTANT
+53      | ;              | SEMICOLON
+54      | }              | BRACE
+56      | Turnback       | RETURN
+56      | max            | IDENTIFIER
+56      | ;              | SEMICOLON
+57      | }              | BRACE
+59      | /^             | SINGLE_LINE_COMMENT_START
+59      |  Main function to test various features| SINGLE_LINE_COMMENT_CONTENT
+60      | Imw            | INTEGER
+60      | main           | IDENTIFIER
+60      | (              | BRACE
+60      | )              | BRACE
+60      | {              | BRACE
+61      | /^             | SINGLE_LINE_COMMENT_START
+61      |  Array declaration and initialization| SINGLE_LINE_COMMENT_CONTENT
+62      | Imw            | INTEGER
+62      | numbers        | IDENTIFIER
+62      | [              | BRACE
+62      | 5              | CONSTANT
+62      | ]              | BRACE
+62      | ;              | SEMICOLON
+63      | IMwf           | FLOAT
+63      | mag            | IDENTIFIER
+63      | ;              | SEMICOLON
+64      | Imw            | INTEGER
+64      | a              | IDENTIFIER
+64      | ;              | SEMICOLON
+65      | Imw            | INTEGER
+65      | b              | IDENTIFIER
+65      | ;              | SEMICOLON
+66      | Imw            | INTEGER
+66      | total          | IDENTIFIER
+66      | ;              | SEMICOLON
+67      | Imw            | INTEGER
+67      | maximum        | IDENTIFIER
+67      | ;              | SEMICOLON
+68      | Loli           | STRUCT
+68      | Vector         | IDENTIFIER
+68      | v1             | IDENTIFIER
+68      | ;              | SEMICOLON
+69      | numbers        | IDENTIFIER
+69      | [              | BRACE
+69      | 0              | CONSTANT
+69      | ]              | BRACE
+69      | =              | ASSIGNMENT_OP
+69      | 10             | CONSTANT
+69      | ;              | SEMICOLON
+70      | numbers        | IDENTIFIER
+70      | [              | BRACE
+70      | 1              | CONSTANT
+70      | ]              | BRACE
+70      | =              | ASSIGNMENT_OP
+70      | 20             | CONSTANT
+70      | ;              | SEMICOLON
+71      | numbers        | IDENTIFIER
+71      | [              | BRACE
+71      | 2              | CONSTANT
+71      | ]              | BRACE
+71      | =              | ASSIGNMENT_OP
+71      | 15             | CONSTANT
+71      | ;              | SEMICOLON
+72      | numbers        | IDENTIFIER
+72      | [              | BRACE
+72      | 3              | CONSTANT
+72      | ]              | BRACE
+72      | =              | ASSIGNMENT_OP
+72      | 30             | CONSTANT
+72      | ;              | SEMICOLON
+73      | numbers        | IDENTIFIER
+73      | [              | BRACE
+73      | 4              | CONSTANT
+73      | ]              | BRACE
+73      | =              | ASSIGNMENT_OP
+73      | 25             | CONSTANT
+73      | ;              | SEMICOLON
+75      | total          | IDENTIFIER
+75      | =              | ASSIGNMENT_OP
+75      | sumArray       | IDENTIFIER
+75      | (              | BRACE
+75      | numbers        | IDENTIFIER
+75      | ,              | COMMA
+75      | 5              | CONSTANT
+75      | )              | BRACE
+75      | ;              | SEMICOLON
+76      | maximum        | IDENTIFIER
+76      | =              | ASSIGNMENT_OP
+76      | findMax        | IDENTIFIER
+76      | (              | BRACE
+76      | numbers        | IDENTIFIER
+76      | ,              | COMMA
+76      | 5              | CONSTANT
+76      | )              | BRACE
+76      | ;              | SEMICOLON
+79      | v1             | IDENTIFIER
+79      | ->             | ACCESS_OP
+79      | x              | IDENTIFIER
+79      | =              | ASSIGNMENT_OP
+79      | 3.0            | CONSTANT
+79      | ;              | SEMICOLON
+80      | v1             | IDENTIFIER
+80      | ->             | ACCESS_OP
+80      | y              | IDENTIFIER
+80      | =              | ASSIGNMENT_OP
+80      | 4.0            | CONSTANT
+80      | ;              | SEMICOLON
+81      | v1             | IDENTIFIER
+81      | ->             | ACCESS_OP
+81      | z              | IDENTIFIER
+81      | =              | ASSIGNMENT_OP
+81      | 0.0            | CONSTANT
+81      | ;              | SEMICOLON
+83      | mag            | IDENTIFIER
+83      | =              | ASSIGNMENT_OP
+83      | magnitude      | IDENTIFIER
+83      | (              | BRACE
+83      | v1             | IDENTIFIER
+83      | )              | BRACE
+83      | ;              | SEMICOLON
+85      | a              | IDENTIFIER
+85      | =              | ASSIGNMENT_OP
+85      | 5              | CONSTANT
+85      | ;              | SEMICOLON
+86      | b              | IDENTIFIER
+86      | =              | ASSIGNMENT_OP
+86      | 10             | CONSTANT
+86      | ;              | SEMICOLON
+87      | swap           | IDENTIFIER
+87      | (              | BRACE
+87      | a              | IDENTIFIER
+87      | ,              | COMMA
+87      | b              | IDENTIFIER
+87      | )              | BRACE
+87      | ;              | SEMICOLON
+88      | IfTrue         | CONDITION
+88      | (              | BRACE
+88      | total          | IDENTIFIER
+88      | >              | RELATIONAL_OP
+88      | 50             | CONSTANT
+88      | )              | BRACE
+88      | {              | BRACE
+89      | IfTrue         | CONDITION
+89      | (              | BRACE
+89      | maximum        | IDENTIFIER
+89      | >              | RELATIONAL_OP
+89      | 25             | CONSTANT
+89      | )              | BRACE
+89      | {              | BRACE
+90      | total          | IDENTIFIER
+90      | =              | ASSIGNMENT_OP
+90      | total          | IDENTIFIER
+90      | +              | ADDOP
+90      | maximum        | IDENTIFIER
+90      | ;              | SEMICOLON
+91      | }              | BRACE
+91      | Otherwise      | CONDITION
+91      | {              | BRACE
+92      | total          | IDENTIFIER
+92      | =              | ASSIGNMENT_OP
+92      | total          | IDENTIFIER
+92      | -              | ADDOP
+92      | maximum        | IDENTIFIER
+92      | ;              | SEMICOLON
+93      | }              | BRACE
+94      | }              | BRACE
+94      | Otherwise      | CONDITION
+94      | {              | BRACE
+95      | total          | IDENTIFIER
+95      | =              | ASSIGNMENT_OP
+95      | total          | IDENTIFIER
+95      | *              | MULOP
+95      | 2              | CONSTANT
+95      | ;              | SEMICOLON
+96      | }              | BRACE
+98      | IfTrue         | CONDITION
+98      | (              | BRACE
+98      | (              | BRACE
+98      | total          | IDENTIFIER
+98      | >              | RELATIONAL_OP
+98      | 100            | CONSTANT
+98      | )              | BRACE
+98      | &&             | LOGIC_OP
+98      | (              | BRACE
+98      | maximum        | IDENTIFIER
+98      | >              | RELATIONAL_OP
+98      | 50             | CONSTANT
+98      | )              | BRACE
+98      | )              | BRACE
+98      | {              | BRACE
+99      | total          | IDENTIFIER
+99      | =              | ASSIGNMENT_OP
+99      | 100            | CONSTANT
+99      | ;              | SEMICOLON
+100     | }              | BRACE
+102     | IfTrue         | CONDITION
+102     | (              | BRACE
+102     | (              | BRACE
+102     | total          | IDENTIFIER
+102     | <              | RELATIONAL_OP
+102     | 50             | CONSTANT
+102     | )              | BRACE
+102     | ||             | LOGIC_OP
+102     | (              | BRACE
+102     | maximum        | IDENTIFIER
+102     | <              | RELATIONAL_OP
+102     | 25             | CONSTANT
+102     | )              | BRACE
+102     | )              | BRACE
+102     | {              | BRACE
+103     | maximum        | IDENTIFIER
+103     | =              | ASSIGNMENT_OP
+103     | 50             | CONSTANT
+103     | ;              | SEMICOLON
+104     | }              | BRACE
+106     | IfTrue         | CONDITION
+106     | (              | BRACE
+106     | total          | IDENTIFIER
+106     | !=             | RELATIONAL_OP
+106     | maximum        | IDENTIFIER
+106     | )              | BRACE
+106     | {              | BRACE
+107     | total          | IDENTIFIER
+107     | =              | ASSIGNMENT_OP
+107     | maximum        | IDENTIFIER
+107     | ;              | SEMICOLON
+108     | }              | BRACE
+110     | Turnback       | RETURN
+110     | 0              | CONSTANT
+110     | ;              | SEMICOLON
+111     | }              | BRACE
+111     |                | EOF_TOKEN
+
+Total Number of lexical errors: 0
+
+Parser Results:
+
+--------------------------------------------------
+Line : 3 Matched Rule used: Comment
+Line : 3 Matched Rule used: Struct-declaration
+Line : 10 Matched Rule used: Comment
+Line : 10 Matched Rule used: Function-declaration
+Line : 12 Matched Rule used: Expression-statement
+Line : 13 Matched Rule used: Jump-statement
+Line : 17 Matched Rule used: Comment
+Line : 17 Matched Rule used: Function-declaration
+Line : 19 Matched Rule used: Expression-statement
+Line : 20 Matched Rule used: Iteration-statement
+Line : 23 Matched Rule used: Compound-statement
+Line : 24 Matched Rule used: Expression-statement
+Line : 26 Matched Rule used: Jump-statement
+Line : 30 Matched Rule used: Comment
+Line : 30 Matched Rule used: Function-declaration
+Line : 32 Matched Rule used: Expression-statement
+Line : 34 Matched Rule used: Expression-statement
+Line : 36 Matched Rule used: Expression-statement
+Line : 40 Matched Rule used: Comment
+Line : 40 Matched Rule used: Function-declaration
+Line : 43 Matched Rule used: Selection-statement
+Line : 43 Matched Rule used: Compound-statement
+Line : 44 Matched Rule used: Jump-statement
+Line : 46 Matched Rule used: Expression-statement
+Line : 48 Matched Rule used: Expression-statement
+Line : 49 Matched Rule used: Iteration-statement
+Line : 49 Matched Rule used: Compound-statement
+Line : 50 Matched Rule used: Selection-statement
+Line : 50 Matched Rule used: Compound-statement
+Line : 51 Matched Rule used: Expression-statement
+Line : 54 Matched Rule used: Expression-statement
+Line : 56 Matched Rule used: Jump-statement
+Line : 60 Matched Rule used: Comment
+Line : 60 Matched Rule used: Function-declaration
+Line : 62 Matched Rule used: Comment
+Line : 69 Matched Rule used: Expression-statement
+Line : 70 Matched Rule used: Expression-statement
+Line : 71 Matched Rule used: Expression-statement
+Line : 72 Matched Rule used: Expression-statement
+Line : 73 Matched Rule used: Expression-statement
+Line : 74 Matched Rule used: Expression-statement
+Line : 75 Matched Rule used: Expression-statement
+Line : 76 Matched Rule used: Expression-statement
+Line : 77 Matched Rule used: Expression-statement
+Line : 78 Matched Rule used: Expression-statement
+Line : 79 Matched Rule used: Expression-statement
+Line : 80 Matched Rule used: Expression-statement
+Line : 81 Matched Rule used: Expression-statement
+Line : 82 Matched Rule used: Expression-statement
+Line : 83 Matched Rule used: Selection-statement
+Line : 83 Matched Rule used: Compound-statement
+Line : 84 Matched Rule used: Selection-statement
+Line : 84 Matched Rule used: Compound-statement
+Line : 85 Matched Rule used: Expression-statement
+Line : 87 Matched Rule used: Compound-statement
+Line : 88 Matched Rule used: Expression-statement
+Line : 91 Matched Rule used: Compound-statement
+Line : 92 Matched Rule used: Expression-statement
+Line : 94 Matched Rule used: Selection-statement
+Line : 94 Matched Rule used: Compound-statement
+Line : 95 Matched Rule used: Expression-statement
+Line : 97 Matched Rule used: Selection-statement
+Line : 97 Matched Rule used: Compound-statement
+Line : 98 Matched Rule used: Expression-statement
+Line : 100 Matched Rule used: Selection-statement
+Line : 100 Matched Rule used: Compound-statement
+Line : 101 Matched Rule used: Expression-statement
+Line : 104 Matched Rule used: Jump-statement
+Total NO of errors: 0

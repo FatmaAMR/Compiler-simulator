@@ -1,0 +1,66 @@
+/@ 
+   Test file for Project#3 compiler
+   This file demonstrates basic language features 
+@/
+
+/^ Include helper functions 
+include".\tests\toinclude.txt";
+
+/^ Type declarations and variable declarations
+Imw globalVar;
+SIMw negativeNum;
+Chj letter;
+Series message;
+IMwf pi;
+SIMwf negativeFloat;
+
+/^ Structure definition
+Loli Person {
+    Imw age;
+    Series name;
+    IMwf height;
+};
+
+/^ Function declaration with parameters
+Imw add(Imw a, Imw b) {
+    Turnback a + b;
+}
+/^ Main function with various statements
+Imw main() {
+    /^ Variable declarations
+    Imw x;
+    IMwf result;
+    Series greeting;
+    Loli Person person1;
+    Imw y = 20;
+    Imw z = add(x, y);
+	Imw counter;
+	Imw I;
+	
+    x = 10;	
+    IfTrue (z > 25) {
+        result = z * 1.5;
+    } Otherwise {
+        result = z / 2.0;
+    }
+    counter = 0;
+    RepeatWhen (counter < 5) {
+        counter = counter + 1;
+        
+        IfTrue (counter == 3) {
+            OutLoop;
+        }
+    }
+    
+    Reiterate (Imw i = 0; i < 10; i = i + 1) {
+        IfTrue (greeting[i] - 2 == 0) {
+			Imw t;
+        }
+    }
+    
+    person1->age = 25;
+    person1->name = "John Doe";
+    person1->height = 175.5;
+    
+    Turnback 0;
+}

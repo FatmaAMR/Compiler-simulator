@@ -1,0 +1,76 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Visual Studio files 
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vcxproj.*.user
+*.db
+*.opendb
+*.VC.db
+*.suo
+*.user
+*.cache
+*.pdb
+*.idb
+*.ipch
+*.iobj
+*.iopdb
+
+# Build folders 
+/Debug/
+/Release/
+/x64/
+/x86/
+/ARM/
+/bin/
+/build/
+/out/
+/*.obj
+/*.exe
+/*.dll
+/*.lib
+/*.exp
+
+# VS temporary files
+/.vs
+*.log
+*.tlog
+*.lastbuildstate
+
+# === Keep only source files ===
+!*.cpp
+!*.h
+
